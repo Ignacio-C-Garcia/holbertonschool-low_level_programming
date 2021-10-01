@@ -5,26 +5,30 @@
 *Return: - 0
 */
 int main(void)
-{	int a;
-	int b;
+{	int a=48; //0
+	int b=49; //1
+	for(;a<=56;) //8
+	{	
+		
+		if (a == 56 && b == 57){
+		putchar('\n');
+		}else
+		{
+			for(;b<=57;b++) //9
+			{
+			putchar(a);
+                 	putchar(b);
+                 	putchar(',');
+                 	putchar(' ');
+			}
 
-	for (a = 48; a < 57; a++)
-	{
-	for (b = 49; b <= 57; b++)
-		{
-		if (a != b)
-		{
-		putchar(a);
-		putchar(b);
-		if (b == 57 && a == 56)
-                 putchar('\n');
-                 else
-                 {
-                 putchar(',');
-         putchar(' ');
-                 }
+			}
+
+		a++;
+		b=a+1;
 		}
-		}
-	}
+
+	
+
 	return (0);
 }
