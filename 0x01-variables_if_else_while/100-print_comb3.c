@@ -12,8 +12,11 @@ int main(void)
 	{
 	for (b = 49; b <= 57; b++)
 		{
+		if (a != b)
+		{
 		putchar(a);
 		putchar(b);
+		}
 		if (b == 57 && a == 56)
 		putchar('\n');
 		else
