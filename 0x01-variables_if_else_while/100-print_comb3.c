@@ -9,20 +9,19 @@ int main(void)
 	int b=49; //1
 	for(;a<=56;) //8
 	{	
-		
-		if (a == 56 && b == 57){
-		putchar('\n');
-		}else
-		{
+
 			for(;b<=57;b++) //9
 			{
 			putchar(a);
                  	putchar(b);
+			if (a == 56 && b == 57){
+                 putchar('\n');
+                 }else
+                 {
                  	putchar(',');
                  	putchar(' ');
-			}
-
-			}
+			}}
+			
 
 		a++;
 		b=a+1;
