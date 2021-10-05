@@ -6,14 +6,15 @@
  */
 int print_last_digit(int n)
 {
+	int absolute_value = n * -1;
 if (n < 0)
 {
-_putchar(n * -1);
-return (n * -1);
+_putchar(absolute_value);
+return (absolute_value);
 }
 else
 {
-	_putchar(n);
+	_putchar(n % 10);
 return (n % 10);
 }
 }
