@@ -13,6 +13,7 @@ return (n * -1);
 }
 else
 {
+	_putchar(n);
 return (n % 10);
 }
 }
