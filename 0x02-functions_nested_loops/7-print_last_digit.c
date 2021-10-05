@@ -10,12 +10,12 @@ int print_last_digit(int n)
 	int mod = n % 10;
 if (n < 0)
 {
-_putchar(absolute_value);
+_putchar(absolute_value + 48);
 return (absolute_value);
 }
 else
 {
-	_putchar(mod);
+	_putchar(mod + 48);
 return (mod);
 }
 }
