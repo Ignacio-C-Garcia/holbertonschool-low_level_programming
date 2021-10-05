@@ -4,6 +4,7 @@
  * _islower - return 1 if c is uppercase, returns 0 otherwise
  *
  * Return: 2 if fails
+ * @c: is a character
  */
 int _islower(int c)
 {
