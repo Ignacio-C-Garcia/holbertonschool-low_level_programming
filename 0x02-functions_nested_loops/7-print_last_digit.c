@@ -6,7 +6,7 @@
  */
 int print_last_digit(int n)
 {
-	int absolute_value = (n * -1) % 10;
+	int absolute_value = (n % 10) * -1;
 	int mod = n % 10;
 if (n < 0)
 {
