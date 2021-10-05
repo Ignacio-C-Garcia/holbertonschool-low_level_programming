@@ -1,17 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - check the code.
- *
- * Return: Always 0.
+ * print_alphabet_x10 - print alphabet x10
  */
-int main(void)
+void print_alphabet_x10(void)
 {
 	char c;
 
-	for (c = 'a'; a <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-	putchar(c);
+	_putchar(c);
 	}
-	putchar('\n');
-		return (0);
 }
