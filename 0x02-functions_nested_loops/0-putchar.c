@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
 *main - entry point imprime en consola _putchar
 *
@@ -7,6 +7,11 @@
 
 int main(void)
 {
-	printf("_putchar");
+	char c[] = "_putchar";
+	int i;
+
+	for (i = 0; i <= 7 ; i++)
+	_putchar(c[i]);
+	_putchar('\n');
 	return (0);
 }
