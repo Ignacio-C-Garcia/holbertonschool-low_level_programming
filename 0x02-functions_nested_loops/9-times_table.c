@@ -27,15 +27,11 @@ void times_table(void)
 			}
 			else
 			{
-				if (dentro == 0)
+				if (dentro != 0)
 				{
-				_putchar(fuera * dentro + '0');
+				_putchar(' ');
 				}
-				else
-				{
-					_putchar(' ');
 				_putchar(fuera * dentro + '0');
-				}
 				if (dentro == 9)
 				{
 				_putchar('\n');
