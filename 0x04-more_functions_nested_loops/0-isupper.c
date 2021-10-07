@@ -1,5 +1,5 @@
 /**
- * main - checks for uppercase character
+ * _isupper - checks for uppercase character
  * Return: 1 if c is uppercase otherwise 0
  * @c: cddd
  */
