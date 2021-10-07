@@ -34,6 +34,7 @@ void print_triangle(int size)
 		_putchar('\n');
 	}
 }
+/**
 int main(void)
 {
 	print_triangle(10);
@@ -42,3 +43,4 @@ int main(void)
 	print_triangle(-12);
 	print_triangle(1);
 }
+*/
