@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 /**
-* print_diagonal - draws a diagonal line on terminal
+* print_triangle - draws a triangle
 *@n: integer
 */
-void print_diagonal(int n)
+void print_triangle(int size)
 {
 	int x;
 	int y;
