@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_triangle - draws a triangle
-*@n: integer
+*@size: integer
 */
 void print_triangle(int size)
 {
@@ -9,19 +9,19 @@ void print_triangle(int size)
 	int y;
 	int z;
 	int linea = 0;
-	int relleno = n;
+	int relleno = size;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (y = 0; y < n; y++)
+		for (y = 0; y < size; y++)
 		{
-			for (x = 0; x < (n - linea); x++)
+			for (x = 0; x < (size - linea); x++)
 			{
 				_putchar(' ');
 			}
 
 		linea = linea + 1;
-		for (z = 0; z <= (n - relleno); z++)
+		for (z = 0; z <= (size - relleno); z++)
 		{
 		_putchar('#');
 		}
