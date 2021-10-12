@@ -3,7 +3,7 @@
  * _puts - a function that prints a string, followed by a new line, to stdout.
  * @str: a string to display to stdout
  */
-void _puts(char *str)
+void puts2(char *str)
 {
 	int i;
 
