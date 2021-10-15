@@ -33,7 +33,7 @@ char *cap_string(char *c)
 
 		if (identify(c[i]) == 1)
 		{
-			if (c[i + 1] > 97 && c[i + 1] < 122)
+			if (c[i + 1] >= 97 && c[i + 1] <= 122)
 			{
 			c[i + 1] = c[i + 1] - 32;
 			}
