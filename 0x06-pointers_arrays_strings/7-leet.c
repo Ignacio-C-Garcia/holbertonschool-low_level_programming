@@ -17,7 +17,7 @@ char *leet(char *str)
 		{
 			if (str[i] == min[x] || str[i] == may[x])
 			{
-				str[i] = num[x];
+				str[i] = num[x] + '0';
 			}
 		}
 	}
