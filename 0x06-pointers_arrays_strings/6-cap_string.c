@@ -28,6 +28,9 @@ char *cap_string(char *c)
 {
 	int i;
 
+	if (c[0] >= 97 && c[0] <= 122)
+		c[0] = c[0] - 32;
+
 	for (i = 0; c[i] != 0; i++)
 	{
 
