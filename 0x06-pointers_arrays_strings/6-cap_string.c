@@ -1,6 +1,10 @@
+/**
+ * identify - a cunction that detect specific simbols
+ * @character: a character
+ * Return: 1 if the parameter is a specific simbol otherwise 0
+ */
 int identify(char character)
 {
-	//11 lenght
 	char simb[] = {' ', 9, '\n', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
 	int i;
@@ -14,6 +18,11 @@ int identify(char character)
 	}
 	return (0);
 }
+/**
+ * cap_string - a function that capitalizes all words of a string.
+ * @c: a string
+ * Return: changed string
+ */
 char *cap_string(char *c)
 {
 	int i;
