@@ -10,7 +10,7 @@ int identify(char character)
 
 	int i;
 
-	for (i = 0; i <= 11; i++)
+	for (i = 0; i <= 12; i++)
 	{
 		if (character == simb[i])
 		{
