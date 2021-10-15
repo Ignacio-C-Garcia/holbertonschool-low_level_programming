@@ -24,8 +24,8 @@ int last_character(char *s)
  */
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len = last_character(s1) - 1;
-	int s2_len = last_character(s2) - 1;
+	int s1_len = last_character(s1);
+	int s2_len = last_character(s2);
 
 	if (s1_len == s2_len)
 	{
