@@ -1,3 +1,8 @@
+/**
+ * string_toupper - changes all lowercase letters to uppercase
+ * @c: a string
+ * Return: the modified string
+ */
 char *string_toupper(char *c)
 {
 	int i;
