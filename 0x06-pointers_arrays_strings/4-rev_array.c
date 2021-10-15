@@ -10,8 +10,9 @@ void reverse_array(int *a, int n)
 	int aux;
 	int start = 0;
 	int end = n - 1;
+	int i;
 
-	for (; start != end && start - 1 != end ; )
+	for (i = 0; i <= (n / 2);)
 	{
 		aux = a[start];
 		a[start] = a[end];
