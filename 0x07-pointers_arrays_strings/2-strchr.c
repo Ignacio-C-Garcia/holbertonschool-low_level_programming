@@ -9,17 +9,18 @@ char *_strchr(char *s, char c)
 int index;
 int count;
 
-for (index = 0; s[index] != 0; index++)
-{
-	count++;
-}
-for (index = 0; index < count; index++)
-{
-	if (s[index] == c)
+	for (index = 0; s[index] != 0; index++)
 	{
-	return (s + index);
+		count++;
 	}
-}
 
-return (0);
+	for (index = 0; index <= count; index++)
+	{
+		if (s[index] == c)
+		{
+			return (s + index);
+		}
+	}
+
+	return (0);
 }
