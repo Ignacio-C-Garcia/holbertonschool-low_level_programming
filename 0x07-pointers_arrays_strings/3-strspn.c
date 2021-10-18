@@ -6,15 +6,16 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int index;
+	int index = 0;
+	unsigned int count = 0;
 
 	for (index = 0; s[index] != 0 && accept[index] != 0; index++)
 	{
 	if (s[index] == accept[index])
 	{
-		index++;
+		count++;
 	}
 
 }
-return (index);
+return (count);
 }
