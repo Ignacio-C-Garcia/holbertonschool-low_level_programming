@@ -6,15 +6,9 @@
  **/
 char *_strchr(char *s, char c)
 {
-int index;
-int count;
+	int index;
 
-	for (index = 0; s[index] != 0; index++)
-	{
-		count++;
-	}
-
-	for (index = 0; index <= count; index++)
+	for (index = 0; index != 0; index++)
 	{
 		if (s[index] == c)
 		{
