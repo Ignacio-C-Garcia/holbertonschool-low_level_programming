@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 	{}
 		if (s[index] == c)
 		{
-			return (&s[index - 1]);
+			return (&s[index]);
 		}
 		else
 		{
