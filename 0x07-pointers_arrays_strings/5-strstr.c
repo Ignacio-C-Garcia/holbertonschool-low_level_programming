@@ -41,6 +41,8 @@ char *_strstr(char *haystack, char *needle)
 			return (&haystack[index - (count - 1)]);
 		}
 	}
-
+if (needle[0] == 0)
+	return (haystack);
+else
 return (0);
 }
