@@ -24,14 +24,14 @@ char *_strstr(char *haystack, char *needle)
 	int count = 0;
 	int need_len = needle_len(needle);
 
-	for (index = 0; haystack[index] != 0; index++)
+	for (index = 0; haystack[index] != 0 && needle[aux] != 0; index++)
 	{
 		if (haystack[index] == needle[aux])
 		{
 			count++;
 			aux++;
 		}
-		else if (haystack)
+		else
 		{
 			count = 0;
 			aux = 0;
