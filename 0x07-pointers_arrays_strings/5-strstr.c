@@ -23,8 +23,6 @@ char *_strstr(char *haystack, char *needle)
 	int aux = 0;
 	int count = 0;
 	int need_len = needle_len(needle);
-	char vacio =  '\0';
-	char *nada = &vacio;
 
 	for (index = 0; haystack[index] != 0 && needle[aux] != 0; index++)
 	{
@@ -44,5 +42,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 
-return (nada);
+return (0);
 }
