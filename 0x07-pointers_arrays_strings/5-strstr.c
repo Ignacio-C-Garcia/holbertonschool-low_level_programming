@@ -22,25 +22,23 @@ char *_strstr(char *haystack, char *needle)
 	int index = 0;
 	int aux = 0;
 	int count = 0;
+	int need_len = needle_len(needle);
 
 	for (index = 0; haystack[index] != 0; index++)
 	{
-		for (; needle[aux] != 0; )
+		if (haystack[index] == needle[aux])
 		{
-			if (haystack[index] == needle[aux])
-			{
-				count++;
-				aux++;
-			}
-			else
-			{
-				count = 0;
-				aux = 0;
-			}
+			count++;
+			aux++;
 		}
-		if (needle_len(needle) == count)
+		else if (haystack)
 		{
-			return (&haystack[index - count]);
+			count = 0;
+			aux = 0;
+		}
+		if (need_len == count)
+		{
+			return (&haystack[index - (count - 1)]);
 		}
 	}
 
