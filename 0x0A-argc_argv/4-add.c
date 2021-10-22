@@ -8,21 +8,34 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 1;
-	int i;
+	int palabra;
+	int letra;
+	int sum = 0;
 
-	if (argc <= 1)
-		printf("0\n");
-	for (i = 1; i < argc; i++)
+	if (argc <= 2)
 	{
-		sum += atoi(argv[i]);
+		printf("0\n");
+		return (0);
+	}
 
-		if (sum == 0)
+	for (palabra = 1; palabra < argc; palabra++)
+	{
+		for (letra = 0; argv[palabra][letra] != '\0'; letra++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[palabra][letra] < 48 || argv[palabra][letra] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
-	printf("%d\n", sum - 1);
+
+	for (palabra = 1; palabra < argc; palabra++)
+	{
+		sum += atoi(argv[palabra]);
+	}
+
+	printf("%d\n", sum);
 	return (0);
+
 }
