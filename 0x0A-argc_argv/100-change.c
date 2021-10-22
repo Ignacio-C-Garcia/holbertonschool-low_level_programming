@@ -12,13 +12,18 @@ int main(int argc, char *argv[])
 	int aux = 0;
 	int counter = 0;
 	int i;
-
+/**
+ * only one argument required
+ */
 	if (argc - 1 != 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
+	/**
+	 * scan each character, if anyone is not a number print and return 0
+	 */
 		for (i = 0; argv[1][i] != '\0'; i++)
 		{
 			if (argv[1][i] < 48 || argv[1][i] > 57)
@@ -39,6 +44,7 @@ int main(int argc, char *argv[])
 		if (aux == atoi(argv[1]))
 			break;
 	}
+
 	printf("%d\n", counter);
 	return (0);
 }
