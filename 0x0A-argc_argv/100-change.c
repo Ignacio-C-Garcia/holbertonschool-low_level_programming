@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
 	/**
 	 * scan each character, if anyone is not a number print and return 0
 	 */
-		for (i = 0; argv[1][i] != '\0'; i++)
+	for (i = 0; argv[1][i] != '\0'; i++)
+	{
+		if (argv[1][i] < 48 || argv[1][i] > 57)
 		{
-			if (argv[1][i] < 48 || argv[1][i] > 57)
-			{
-				printf("0\n");
-				return (0);
-			}
+			printf("0\n");
+			return (0);
 		}
+	}
 
 	for (i = 0; i <= 4; i++)
 	{
