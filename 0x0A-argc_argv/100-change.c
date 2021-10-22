@@ -36,5 +36,6 @@ int main(int argc, char *argv[])
 		if (aux == atoi(argv[1]))
 			break;
 	}
+	printf("%d\n", counter);
 	return (0);
 }
