@@ -19,15 +19,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	for (i = 0; argv[1][i] != '\0'; i++)
-	{
-		if (argv[1][i] < 48 || argv[1][i] > 57)
-		{
-			printf("0\n");
-			return (0);
-		}
-	}
-
 	for (i = 0; i <= 4; i++)
 	{
 
