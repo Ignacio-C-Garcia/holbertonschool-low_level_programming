@@ -18,7 +18,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
+	if (atoi(argv[1]) < 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	for (i = 0; i <= 4; i++)
 	{
 
@@ -30,13 +34,6 @@ int main(int argc, char *argv[])
 		if (aux == atoi(argv[1]))
 			break;
 	}
-
-	if (argv[1][0] == '\0')
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	printf("%d\n", counter);
 	return (0);
 }
