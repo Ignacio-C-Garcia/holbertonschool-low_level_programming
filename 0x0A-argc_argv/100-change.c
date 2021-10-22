@@ -33,9 +33,8 @@ int main(int argc, char *argv[])
 			aux += array[i];
 			counter++;
 		}
+		if (aux == atoi(argv[1]))
+			break;
 	}
-	printf("el valor de coin es: %d\n", atoi(argv[1]));
-	printf("el valor de counter es: %d\n", counter);
-	printf("el valor a aux es: %d\n", aux);
 	return (0);
 }
