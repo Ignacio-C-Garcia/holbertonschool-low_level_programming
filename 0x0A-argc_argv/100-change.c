@@ -39,6 +39,11 @@ int main(int argc, char *argv[])
 		if (aux == atoi(argv[1]))
 			break;
 	}
+	if (argv[1][0] == '\0')
+	{
+		printf("Error");
+		return (1);
+	}
 
 	printf("%d\n", counter);
 	return (0);
