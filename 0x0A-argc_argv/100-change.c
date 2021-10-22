@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		if (argv[1][i] < 48 || argv[1][i] > 57)
 		{
 			printf("0\n");
-			return (1);
+			return (0);
 		}
 	}
 
@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 		if (aux == atoi(argv[1]))
 			break;
 	}
+
 	if (argv[1][0] == '\0')
 	{
 		printf("Error");
