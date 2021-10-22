@@ -1,39 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints the minimum number of coins
- * @argc: numbers of arguments (always 1)
- * @argv: string value of argument
- *Return: always 0
+ * main - prints the minimum number of coins to make
+ * change for an amount of money
+ *
+ * @argc: argument counter
+ * @argv: list of arguments
+ *
+ * Return: the number 0
  */
 int main(int argc, char *argv[])
 {
-	int array[] = {25, 10, 5, 2, 1};
-	int aux = 0;
-	int counter = 0;
-	int i;
+
+	int coin[] = {25, 10, 5, 2, 1};
+	int pos, res = 0;
+	int cents;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) < 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	for (i = 0; i <= 4; i++)
-	{
 
-		for (; aux + array[i] <= atoi(argv[1]);)
+	cents = atoi(argv[1]);
+
+	for (pos = 0; cents > 0;)
+	{
+		if (coin[pos] > cents)
+			pos++;
+		else
 		{
-			aux += array[i];
-			counter++;
+			cents -= coin[pos];
+			res++;
 		}
-		if (aux == atoi(argv[1]))
-			break;
 	}
-	printf("%d\n", counter);
+	printf("%d\n", res);
+
 	return (0);
 }
