@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 	{
 		if (argv[1][i] < 48 || argv[1][i] > 57)
 		{
-			printf("0\n");
-			return (0);
+			printf("Error\n");
+			return (1);
 		}
 	}
 
