@@ -20,7 +20,7 @@ int _strlen(char *s)
 * @s: a string;
 */
 
-char *_st(char *s)
+char *rev_string(char *s)
 {
 	int aux;
 	int start = 0;
@@ -35,5 +35,5 @@ char *_st(char *s)
 		end--;
 	}
 
-
+	return (s);
 }
