@@ -66,6 +66,8 @@ char *str_concat(char *s1, char *s2)
 	str1_len = _strlen(s1);
 	str2_len = _strlen(s2);
 	result = malloc(str1_len + str2_len + 1);
+	if (!result)
+		return (0);
 	copy(result, s1, 0);
 	copy(result, s2, str2_len - 1);
 	return (result);
