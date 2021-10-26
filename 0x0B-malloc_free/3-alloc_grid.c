@@ -18,7 +18,10 @@ int **alloc_grid(int width, int height)
 	{
 		bi_array[aux] = malloc(sizeof(int) * width);
 		if (!bi_array[aux])
+		{
+			free(bi_array);
 			return (0);
+		}
 	}
 
 
