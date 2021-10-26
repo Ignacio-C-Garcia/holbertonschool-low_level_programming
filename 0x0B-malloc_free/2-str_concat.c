@@ -46,7 +46,13 @@ char *str_concat(char *s1, char *s2)
 	char *result;
 
 	if (s1 == NULL && s2 == NULL)
-		return (0);
+	{
+		result = malloc(1);
+		if (!result)
+			return (0);
+		result = '\0';
+		return (result);
+	}
 	if (s1 == NULL)
 	{
 		str2_len = _strlen(s2);
