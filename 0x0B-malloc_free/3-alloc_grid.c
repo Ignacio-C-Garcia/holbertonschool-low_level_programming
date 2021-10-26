@@ -23,6 +23,7 @@ int **alloc_grid(int width, int height)
 
 			for (i = 0; i < aux; i++)
 				free(bi_array[i]);
+				free(bi_array);
 			return (0);
 		}
 	}
