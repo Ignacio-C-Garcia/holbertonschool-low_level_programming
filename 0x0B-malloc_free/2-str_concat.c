@@ -69,7 +69,7 @@ char *str_concat(char *s1, char *s2)
 	if (!result)
 		return (0);
 	copy(result, s1, 0);
-	copy(result, s2, str2_len - 1);
+	copy(result, s2, str1_len);
 	return (result);
 
 }
