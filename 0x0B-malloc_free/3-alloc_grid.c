@@ -14,14 +14,17 @@ int **alloc_grid(int width, int height)
 	int y;
 
 	for (aux = 0; aux < height; aux++)
+	{
 		bi_array[aux] = malloc(sizeof(int) * height);
 		if (!bi_array[aux])
 			return (0);
+	}
 
 
 	for (y = 0; y < height; y++)
+	{
 		for (x = 0; x < width; x++)
 			bi_array[y][x] = 0;
-
+	}
 	return (bi_array);
 }
