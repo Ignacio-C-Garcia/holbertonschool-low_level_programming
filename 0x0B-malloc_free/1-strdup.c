@@ -1,10 +1,26 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _strdup - returns a pointer to a copy of the str
+ * _strlen - return the lenght of a string
  * @str: sting
- * Return: a pointer to a copy of str
+ * Return: return the length of a string
  */
+int _strlen(char *str)
+{
+	int i;
+	int counter = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		counter++;
+	}
+	return (counter);
+}
+/**
+* _strdup - returns a pointer to a copy of the str
+* @str: sting
+* Return: a pointer to a copy of str
+*/
 char *_strdup(char *str)
 {
 	int str_len = _strlen(str);
