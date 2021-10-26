@@ -10,9 +10,6 @@ int _strlen(char *str)
 	int i;
 	int counter = 0;
 
-	if (str == NULL)
-		return (0);
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		counter++;
@@ -26,13 +23,14 @@ int _strlen(char *str)
 */
 char *_strdup(char *str)
 {
-		int str_len = _strlen(str);
+		int str_len;
 		char *copy;
 		int i;
 
-		if (str_len == 0)
+		if (str == 0)
 			return (0);
 
+	str_len = _strlen(str);
 	copy = malloc(str_len);
 
 	if (!copy)
