@@ -6,13 +6,14 @@
  * Return: f
  */
 int **alloc_grid(int width, int height)
-{
+{	int aux = 0;
+	int x, y;
 	int **bi_array = malloc(height * 8);
 
-	int aux = 0;
-	int x;
-	int y;
-
+	if (!bi_array)
+		return (0);
+	if (width == 0 && height == 0)
+		return (0);
 	for (aux = 0; aux < height; aux++)
 	{
 		bi_array[aux] = malloc(sizeof(int) * width);
