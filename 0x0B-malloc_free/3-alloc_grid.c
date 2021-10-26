@@ -7,7 +7,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **bi_array = malloc(width * 8);
+	int **bi_array = malloc(height * 8);
 
 	int aux = 0;
 	int x;
@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 
 	for (aux = 0; aux < height; aux++)
 	{
-		bi_array[aux] = malloc(sizeof(int) * height);
+		bi_array[aux] = malloc(sizeof(int) * width);
 		if (!bi_array[aux])
 			return (0);
 	}
