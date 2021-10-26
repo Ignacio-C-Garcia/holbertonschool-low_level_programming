@@ -47,11 +47,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		result = malloc(1);
-		if (!result)
-			return (0);
-		result = '\0';
-		return (result);
+		return ("");
 	}
 	if (s1 == NULL)
 	{
