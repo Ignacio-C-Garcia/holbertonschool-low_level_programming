@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < n; i++)
 		copy[s1len + i] = s2[i];
 
-	copy[s1len + s2len + 1] = '\0';
+	copy[_strlen(copy)] = '\0';
 
 	return (copy);
 
