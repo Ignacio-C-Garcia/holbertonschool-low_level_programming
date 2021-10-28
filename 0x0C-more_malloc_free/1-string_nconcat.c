@@ -45,11 +45,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!copy)
 		return (NULL);
 
-	if (!s1)
-		s1 = "";
-	if (!s2)
-		s2 = "";
-
 	for (i = 0; i < s1len; i++)
 		copy[i] = s1[i];
 
@@ -61,7 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else if (s2len == 0)
 		copy[s1len] = '\0';
 	else
-		copy[s1len + n + 1] = '\0';
+		copy[s1len + n - 1] = '\0';
 
 	return (copy);
 
