@@ -31,14 +31,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i;
 
 	if (!s1)
-		s1 = "";
+		s1[0] = '\0';
 	if (!s2)
-		s2 = "";
+		s2[0] = '\0';
 
 	s1len = _strlen(s1);
 	s2len = _strlen(s2);
 
-	if (s2len < n)
+	if (s2len <= n)
 		n = s2len;
 
 	copy = malloc(s1len + n + 1);
