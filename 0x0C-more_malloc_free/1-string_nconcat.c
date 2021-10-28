@@ -26,9 +26,17 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *copy;
-	unsigned int s1len = _strlen(s1);
-	unsigned int s2len = _strlen(s2);
+	unsigned int s1len;
+	unsigned int s2len;
 	unsigned int i;
+
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
+
+	s1len = _strlen(s1);
+	s2len = _strlen(s2);
 
 	if (s2len < n)
 		n = s2len;
