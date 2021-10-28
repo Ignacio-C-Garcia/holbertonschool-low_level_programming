@@ -30,12 +30,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s2len = _strlen(s2);
 	unsigned int i;
 
-	copy = malloc(s1len + s2len + 1);
-	if (!copy)
-		return (NULL);
-
 	if (s2len < n)
 		n = s2len;
+
+	copy = malloc(s1len + n + 1);
+	if (!copy)
+		return (NULL);
 
 	if (!s1)
 		s1 = "";
@@ -48,7 +48,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < n; i++)
 		copy[s1len + i] = s2[i];
 
-	copy[_strlen(copy)] = '\0';
+	if (s1len == 0)
+		copy[n] = '\0';
+	else if (s2len == 0)
+		copy[s1len] = '\0';
+	else
+		copy[s1len + n + 1] = '\0';
 
 	return (copy);
 
