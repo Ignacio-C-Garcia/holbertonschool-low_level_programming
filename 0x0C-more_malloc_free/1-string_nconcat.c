@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * _strlen - return lenght of str
  * @str: string
@@ -31,9 +30,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i;
 
 	if (!s1)
+	{
 		s1 = "";
+		n = 0;
+	}
 	if (!s2)
+	{
 		s2 = "";
+		n = 0;
+	}
 
 	s1len = _strlen(s1);
 	s2len = _strlen(s2);
