@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2len < n)
 		n = s2len;
 
-	copy = malloc(s1len + n);
+	copy = malloc(s1len + n + 1);
 	if (!copy)
 		return (NULL);
 
