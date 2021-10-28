@@ -1,6 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * _strlen - return lenght of str
+ * @str: string
+ * Return: number;
+ */
+int _strlen(char *str)
+{
+	int i;
+	int counter = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		counter++;
+	}
+	return (counter);
+}
+/**
  * string_nconcat - concatenates two strings.
  * @s1: string
  * @s2: string
@@ -10,8 +26,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *copy;
-	unsigned int s1len = sizeof(s1[0]) - 1;
-	unsigned int s2len = sizeof(s2)[0] - 1;
+	unsigned int s1len = _strlen(s1);
+	unsigned int s2len = _strlen(s2);
 	unsigned int i;
 
 	copy = malloc(s1len + s2len + 1);
@@ -27,12 +43,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	for (i = 0; i < s1len; i++)
-	{
 		copy[i] = s1[i];
+
+	for (i = 0; i < n; i++)
 		copy[s1len + i] = s2[i];
-	}
-	printf("%d", s1len);
-	copy[s1len + s2len] = '\0';
+
+	copy[s1len + s2len + 1] = '\0';
 
 	return (copy);
 
