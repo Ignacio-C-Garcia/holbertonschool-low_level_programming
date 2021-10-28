@@ -32,12 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!s1)
 	{
 		s1 = "";
-		n = 0;
 	}
 	if (!s2)
 	{
 		s2 = "";
-		n = 0;
 	}
 
 	s1len = _strlen(s1);
@@ -56,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < n; i++)
 		copy[s1len + i] = s2[i];
 
-	copy[s1len + n - 2] = '\0';
+	copy[s1len + n] = '\0';
 
 	return (copy);
 
