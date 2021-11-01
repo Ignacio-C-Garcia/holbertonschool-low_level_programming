@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "dog.h"
-#include <stdlib.h>
 /**
 * _strlen - return the lenght of a string
 * @str: sting
