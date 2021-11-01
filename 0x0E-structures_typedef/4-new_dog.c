@@ -1,86 +1,37 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
+#include <string.h>
 /**
-* _strlen - return the lenght of a string
-* @str: sting
-* Return: return the length of a string
-*/
-	int _strlen(char *str)
-	{
-		int i;
-		int counter = 0;
-
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			counter++;
-		}
-		return (counter);
-}
-/**
-* _strdup - returns a pointer to a copy of the str
-* @str: sting
-* Return: a pointer to a copy of str
-*/
-char *_strdup(char *str)
-{
-		int str_len;
-		char *copy;
-		int i;
-
-	if (str == 0)
-		return (0);
-
-	str_len = _strlen(str);
-	copy = malloc(str_len + 1);
-
-	if (!copy)
-	{
-		return (0);
-	}
-
-	for (i = 0; i < str_len; i++)
-	{
-		copy[i] = str[i];
-	}
-	return (copy);
-}
-/**
- * new_dog - short description
- * @name: string
- * @age: positive number
- * @owner: string
- * Return: pointer to new structure
- */
+  * new_dog - short description
+  * @name: string
+  * @age: number
+  * @owner: string
+  * Return: a pointer to a struct
+  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *aux;
-	char *name1;
-	char *owner1;
+	dog_t *d;
 
-	if (name == NULL || owner == NULL || age < 0)
+	d = malloc(sizeof(dog_t));
+	if (!d)
 		return (NULL);
 
-	aux = malloc(sizeof(dog_t));
-	if (!aux)
-		return (NULL);
-
-	aux->name = strdup(name);
-
-	if (!aux->name)
+	d->name = strdup(name);
+	if (!(d->name))
 	{
-		free(aux);
+		free(d);
 		return (NULL);
 	}
-	owner1 = _strdup(owner);
-	if (owner1)
+
+	d->owner = strdup(owner);
+	if (!(d->owner))
 	{
-		free(owner1);
-		free(aux);
+		free(d->name);
+		free(d);
 		return (NULL);
 	}
-	aux->name = name1;
-	aux->age = age;
-	aux->owner = owner1;
 
-	return (aux);
+	d->age = age;
+
+	return (d);
 }
