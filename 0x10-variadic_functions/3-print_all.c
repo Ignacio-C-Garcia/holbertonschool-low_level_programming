@@ -1,45 +1,47 @@
 #include <stdio.h>
 #include <stdarg.h>
-
-void func_char(char c)
-{
-	printf("%c", c);
-}
-
-
-
+/**
+ * print_all - a function thath prints all types of var
+ * @format: a string of formats
+ */
 void print_all(const char * const format, ...)
 {
+	va_list ap;
 	int aux = 0;
+	char *str;
+	int guarangada;
 
-	struct lista
-	{
-	char letra;
-	void (*pointer)();
-	};
-
-	struct lista types[] = {
-	{'c', func_char},
-	{'i', func_int},
-	{'f', func_f},
-	{'s', func_str}
-
-	};
-
-
+	va_start(ap, format);
 
 	while (format[aux] != 0)
 	{
-		i = 0;
+		guarangada = 0;
 
-		while (i < 4)
+		switch (format[aux])
 		{
-			if (types[i].letra == format[aux])
-			{
-				typres[i].func();
-			}
+		case 'c':
+			printf("%c", va_arg(ap, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(ap, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(ap, double));
+			break;
+		case 's':
+			str = va_arg(ap, char *);
+			if (!str)
+				str = "(nil)";
+			printf("%s", str);
+			break;
+		default:
+			guarangada = 1;
 		}
+		if (format[aux + 1] && guarangada == 0)
+			printf(", ");
 		aux++;
 
 	}
+	printf("\n");
+	va_end(ap);
 }
