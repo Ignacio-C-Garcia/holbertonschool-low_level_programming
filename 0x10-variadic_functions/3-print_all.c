@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	int guarangada;
 
 	va_start(ap, format);
-		while (format[aux] != 0)
+		while (format && format[aux] != 0)
 		{
 			guarangada = 0;
 
