@@ -1,4 +1,10 @@
 #include "lists.h"
+/**
+ *add_node - A function that adds a new node at the beginning of a list_t list
+ * @head: a pointer to the head
+ * @str: a string
+ * Return: a pointer to the new node
+ */
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node = malloc(sizeof(list_t));
