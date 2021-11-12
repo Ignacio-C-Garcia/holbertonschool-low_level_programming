@@ -5,22 +5,12 @@
  */
 void free_list(list_t *head)
 {
-list_t *aux = head;
-if (!aux)
-{
-	while (!aux)
+list_t *aux;
+	while (!head)
 	{
-		while (!aux)
-		{
-			if (aux->next)
-				aux = aux->next;
-			else
-			{
-				free(aux->str);
-				free(aux);
-			}
-		}
 		aux = head;
+		head = head->next;
+		free(aux);
 	}
-}
+
 }
