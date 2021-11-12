@@ -10,6 +10,7 @@ list_t *aux;
 	{
 		aux = head;
 		head = head->next;
+		free(aux->next);
 		free(aux->str);
 		free(aux);
 	}
