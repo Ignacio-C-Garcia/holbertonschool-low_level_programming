@@ -16,10 +16,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (!*head)
 		return (-1);
 
-	if (index != 0)
+	if (index == 0)
+	{
+		node = *head;
+		*head = (*head)->next;
+		free(node);
+		return (1);
+	}
 		for (i = 0; i < (index - 1); i++)
 		{
-			if ((*head)->next->next)
+			if ((*head)->next)
 			{
 				*head = (*head)->next;
 			}
@@ -29,11 +35,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			}
 		}
 	if ((*head)->next)
+	{
 		node = (*head)->next;
-	else
-		return (-1);
-	if ((*head)->next->next)
-	(*head)->next = (*head)->next->next;
+		(*head)->next = (*head)->next->next;
+	}
 	else
 		return (-1);
 	free(node);
