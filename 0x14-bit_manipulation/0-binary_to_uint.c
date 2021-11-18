@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _pow - return x^n.
  * @x: base number
@@ -25,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
 	int len;
-  int expo = 0;
+	int expo = 0;
 
 	if (!b)
 		return (result);
@@ -36,7 +35,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
-	for (len--; len >= 0; len--;)
+	for (len--; len >= 0; len--)
 	{
 		if (b[len] == '1')
 			result += _pow(2, expo);
