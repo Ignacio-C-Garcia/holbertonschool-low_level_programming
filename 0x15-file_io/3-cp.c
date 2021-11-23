@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to;
 	int file_read, file_write;
+	int aux;
 	char buff[1024];
 
 	if (argc != 3)
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		get_error(98, argv, 0);
 
-	file_to = open(argv[2], O_CREAT | O_WRONLY, 0644);
+	file_to = open(argv[2], O_CREAT | O_WRONLY, 0664);
 
 		if (file_to == -1)
 			get_error(99, argv, 0);
@@ -63,10 +64,13 @@ int main(int argc, char *argv[])
 			get_error(99, argv, 0);
 	}
 
+	aux = close(file_from);
+	if (aux == -1)
+		get_error(100, argv, aux);
 
-
-	close(file_from);
-	close(file_to);
+	aux = close(file_to);
+	if (aux == -1)
+		get_error(100, argv, aux);
 	return (0);
 }
 
