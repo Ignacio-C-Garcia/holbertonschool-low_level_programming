@@ -35,7 +35,7 @@ void get_error(char error, char **file_name, int fd_value)
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, aux;
+	int file_from, file_to;
 	int file_read, file_write;
 	char buff[1024];
 
