@@ -30,8 +30,7 @@ dlistint_t *new_node;
 
 if (!h)
 return (NULL);
-if (!*h && idx != 0)
-return (NULL);
+
 
 if (idx == 0)
 return (add_dnodeint(h, n));
@@ -46,18 +45,17 @@ new_node->n = n;
 new_node->prev = NULL;
 new_node->next = NULL;
 
-for (i = 0; i < idx && *h; i++)
+for (i = 0; i < (idx - 1) && *h; i++)
 *h = (*h)->next;
 if (!*h)
 {
 free(new_node);
 return (NULL);
 }
-new_node->prev = (*h)->prev;
-new_node->next = *h;
+new_node->prev = (*h);
+new_node->next = (*h)->next;;
 
-(*h)->prev->next = new_node;
-(*h)->prev = new_node;
+(*h)->next->prev = new_node;
 *h = head;
 return (new_node);
 }
