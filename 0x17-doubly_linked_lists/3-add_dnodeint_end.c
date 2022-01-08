@@ -1,4 +1,10 @@
 #include "lists.h"
+/**
+ * add_dnodeint_end - add a node at the end of dll
+ * @head: header of dll
+ * @n: value number of node
+ * Return: return new node
+ */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node = malloc(sizeof(dlistint_t));
