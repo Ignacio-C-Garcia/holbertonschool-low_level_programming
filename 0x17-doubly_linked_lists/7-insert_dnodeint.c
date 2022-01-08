@@ -39,4 +39,5 @@ new_node->next = *h;
 (*h)->prev = new_node;
 free(*h);
 *h = head;
+return (new_node);
 }
