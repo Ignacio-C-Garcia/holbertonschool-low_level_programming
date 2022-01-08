@@ -24,6 +24,12 @@ if (!*h && idx == 0)
 *h = new_node;
 return (new_node);
 }
+if (*head && index == 0)
+{
+new_node->next = *h;
+*h = new_node
+return (new_node); 
+}
 
 for (i = 0; i < idx; i++)
 {
