@@ -41,15 +41,12 @@ new_node->n = n;
 new_node->prev = NULL;
 new_node->next = NULL;
 
-for (i = 0; i < idx; i++)
-{
-	
+for (i = 0; i < idx && *h; i++)
+*h = (*h)->next;
 if (!*h)
 {
 free(new_node);
 return (NULL);
-}
-*h = (*h)->next;
 }
 new_node->prev = (*h)->prev;
 new_node->next = *h;
