@@ -34,7 +34,10 @@ return (new_node);
 for (i = 0; i < idx; i++)
 {
 if (!*h)
+{
+free(new_node);
 return (NULL);
+}
 else
 *h = (*h)->next;
 }
@@ -45,4 +48,5 @@ new_node->next = *h;
 (*h)->prev = new_node;
 free(*h);
 *h = head;
+return (new_node);
 }
