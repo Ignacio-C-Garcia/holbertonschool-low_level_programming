@@ -52,7 +52,7 @@ if (!*h)
 free(new_node);
 return (NULL);
 }
-new_node->prev = (*h)-prev;
+new_node->prev = (*h)->prev;
 new_node->next = (*h);
 
 (*h)->prev->next = new_node;
