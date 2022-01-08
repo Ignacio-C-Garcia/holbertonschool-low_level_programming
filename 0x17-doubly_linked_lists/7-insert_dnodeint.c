@@ -53,7 +53,7 @@ free(new_node);
 return (NULL);
 }
 new_node->prev = (*h);
-new_node->next = (*h)->next;;
+new_node->next = (*h)->next;
 
 (*h)->next->prev = new_node;
 *h = head;
