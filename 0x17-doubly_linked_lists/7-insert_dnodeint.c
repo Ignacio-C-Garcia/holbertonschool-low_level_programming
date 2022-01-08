@@ -33,13 +33,12 @@ return (new_node);
 
 for (i = 0; i < idx; i++)
 {
+*h = (*h)->next;
 if (!*h)
 {
 free(new_node);
 return (NULL);
 }
-else
-*h = (*h)->next;
 }
 new_node->prev = (*h)->prev;
 new_node->next = *h;
