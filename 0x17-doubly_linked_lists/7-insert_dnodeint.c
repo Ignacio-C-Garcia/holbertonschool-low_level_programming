@@ -24,10 +24,10 @@ if (!*h && idx == 0)
 *h = new_node;
 return (new_node);
 }
-if (*h && index == 0)
+if (*h && idx == 0)
 {
 new_node->next = *h;
-*h = new_node
+*h = new_node;
 return (new_node); 
 }
 
@@ -46,7 +46,6 @@ new_node->next = *h;
 
 (*h)->prev->next = new_node;
 (*h)->prev = new_node;
-free(*h);
 *h = head;
 return (new_node);
 }
