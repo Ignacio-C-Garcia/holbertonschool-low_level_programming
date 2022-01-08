@@ -28,6 +28,11 @@ dlistint_t *head = *h;
 unsigned int i = 0;
 dlistint_t *new_node;
 
+if (!head)
+		return (NULL);
+	if (!*head && idx != 0)
+		return (NULL);
+		
 if (idx == 0)
 return (add_dnodeint(h, n));
 if (idx == dlistint_len(*h))
