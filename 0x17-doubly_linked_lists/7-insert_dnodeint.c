@@ -28,7 +28,7 @@ dlistint_t *head = *h;
 unsigned int i = 0;
 dlistint_t *new_node;
 
-if (!h || !*h)
+if (!h)
 return (NULL);
 
 
