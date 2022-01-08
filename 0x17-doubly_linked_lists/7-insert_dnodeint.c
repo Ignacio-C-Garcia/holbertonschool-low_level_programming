@@ -28,7 +28,10 @@ return (new_node);
 for (i = 0; i < idx; i++)
 {
 if (!*h)
+{
+free(new_node);
 return (NULL);
+}
 else
 *h = (*h)->next;
 }
