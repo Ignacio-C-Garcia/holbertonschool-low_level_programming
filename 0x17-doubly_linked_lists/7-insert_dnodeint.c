@@ -45,7 +45,7 @@ new_node->n = n;
 new_node->prev = NULL;
 new_node->next = NULL;
 
-for (i = 0; i < idx && *h; i++)
+for (i = 0; i <= idx && *h; i++)
 *h = (*h)->next;
 if (!*h)
 {
