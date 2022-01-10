@@ -49,6 +49,7 @@ for (i = 0; i < idx && *h; i++)
 *h = (*h)->next;
 if (!*h)
 {
+*h = head;
 free(new_node);
 return (NULL);
 }
