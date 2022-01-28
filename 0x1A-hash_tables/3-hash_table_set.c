@@ -24,11 +24,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht->array)
 		return (0);
 
-	index = key_index((unsigned char *)key, 1024);
+	index = key_index((unsigned char *)key, ht->size);
 	aux = ht->array[index];
 	while (aux)
 	{
-		if (strncmp(aux->key, key, strlen(aux->key))== 0)
+		if (strcmp(aux->key, key) == 0)
 		{
 			free(aux->value);
 			aux->value = strdup(value);
