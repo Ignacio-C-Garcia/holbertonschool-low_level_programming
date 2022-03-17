@@ -6,7 +6,5 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-school: $(OBJ)
-	${CC} $(OBJ) -o $(NAME)
-%.o: %.c
-	$(CC) -c $(SRC)
+$(NAME):
+	$(CC) $(OBJ) -c 
