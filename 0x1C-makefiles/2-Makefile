@@ -8,8 +8,8 @@ OBJ = main.o school.o
 NAME = school
 school: $(SRC) $(OBJ)
 	$(CC) $(OBJ) -o school
-main.o: main.c
+main.o: $(SRC)
 	gcc main.c -c -o main.o
-school.o: school.c
+school.o: $(SRC)
 	gcc school.c -c -o school.o
 
