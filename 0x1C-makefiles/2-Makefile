@@ -1,0 +1,15 @@
+# _*_ MakeFile _*_
+
+all: school
+
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+school: $(SRC) $(OBJ)
+	$(CC) $(OBJ) -o school
+main.o: main.c
+	gcc main.c -c -o main.o
+school.o: school.c
+	gcc school.c -c -o school.o
+
