@@ -4,12 +4,9 @@ all: school
 
 CC = gcc
 SRC = main.c school.c
-OBJ = main.o school.o
+OBJ = $(SRC:.c=.o)
 NAME = school
-school: $(SRC) $(OBJ)
-	$(CC) $(OBJ) -o school
-main.o: $(SRC)
-	gcc main.c -c -o main.o
-school.o: $(SRC)
-	gcc school.c -c -o school.o
-
+school: $(OBJ)
+	${CC} $(OBJ) -o $(NAME)
+%.o: %.c
+	$(CC) -c $(SRC)
