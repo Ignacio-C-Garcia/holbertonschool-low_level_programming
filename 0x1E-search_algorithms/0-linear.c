@@ -1,0 +1,24 @@
+#include <stdio.h>
+/**
+ * linear_search - linear_search
+ * @array: array
+ * @size: size of array
+ * @value: value to search in array
+ * Return: index where value is located or -1
+ */
+int linear_search(int *array, size_t size, int value)
+{
+	int i = 0;
+
+	if (array == NULL)
+		return (-1);
+
+	for (i = 0; i < size; i++)
+	{
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		if (array[i] == value)
+			return (i);
+	}
+
+	return (-1);
+}
